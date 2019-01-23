@@ -3,6 +3,8 @@ layout: post
 title: 更换hexo主题
 excerpt: 趁热打铁，写完上一篇，赶紧马不停蹄再来一篇，万一没激情就只不定哪天才能写了
 date: 2019-01-23 14:30:01
+toc: true
+category: 爬坑记录
 tags: 
  - hexo
  - 教程
@@ -11,7 +13,7 @@ tags:
 趁热打铁，写完上一篇，赶紧马不停蹄再来一篇，万一没激情就只不定哪天才能写了。
 
 ## 环境准备
-
+<!--more-->
 [在这](https://hexo.io/themes/)挑一款好看的主题，我选的是[这个](https://clovertuan.github.io/)，很简洁。
 
 ## 主题更换

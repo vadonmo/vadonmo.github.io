@@ -74,7 +74,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-theme: clover
+theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -82,4 +82,8 @@ deploy:
   type: git
   repository: https://github.com/vadonmo/vadonmo.github.io
   branch: master
+
+auto_excerpt:
+  enable: false
+  length: 150
 
