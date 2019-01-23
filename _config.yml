@@ -8,7 +8,7 @@ subtitle: 为了美好的目的，去做错误的事，终将走向歧途。
 description:
 keywords:
 author: Vadon Mo
-language: zh
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
@@ -73,7 +73,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+# theme: landscape
+theme: clover
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -81,3 +82,4 @@ deploy:
   type: git
   repository: https://github.com/vadonmo/vadonmo.github.io
   branch: master
+
