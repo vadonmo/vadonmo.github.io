@@ -104,6 +104,14 @@ npm install hexo-asset-image --save
 ### 每次部署CNAME文件消失问题
 我的解决办法是在public目录下新建 `CNAME` 文件，里面内容为自己域名。这样每次部署就不会丢失了。
 
+### 常用命令
+``` shell
+# 本地预览，分别为清空缓存，生成静态文件，启动服务器
+hexo clean && hexo g && hexo s
+# 发布至github
+hexo clean && hexo g && hexo d
+```
+
 ## 结语
 就先这样吧，博客写着真累，果然以前不写博客是对的。~o(*￣▽￣*)o
 下一篇 讲讲怎么换背景吧，默认的稍微有点难看。
