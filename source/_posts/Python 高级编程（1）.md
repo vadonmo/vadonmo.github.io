@@ -35,7 +35,7 @@ PEP 0 则告诉你最新的 `Python` 消息。
 ### 数据类型与集合的变化
 
 3 中所有的字符串都是 `Unicode` ，字节（`bytes`）需要加一个 `b` 或 `B` 的前缀。~~不支持使用 `u` 前缀，使用会引发语法错误。~~(3.0和3.1不支持，3.3已恢复该前缀)
-### 用于跨版本兼容性的常用工具和技术
+## 用于跨版本兼容性的常用工具和技术
 
 #### 定义版本号
 
@@ -45,6 +45,7 @@ PEP 0 则告诉你最新的 `Python` 消息。
 - 修订号（`PATCH`）：当你做了向后兼容的问题修正
   
 #### `__future__` 模块
+
 `__future__` 模块主要功能是将新版本中的一些功能反向迁移至就版本中，采用的是导入语句的形式。
 ```
 from __future__ import <feature>
@@ -56,9 +57,41 @@ from __future__ import <feature>
 - `unicode_literals` ：将每个字符串解释为 `Unicode` （PEP 3112）。
 
 #### Six 模块
+
 提供了常用的兼容性的整个样板。使用时依然采用导入形式。
 ```
 import six.moves.urllib as urllib
 ```
-### 其他 `Python` 实现
+## 其他 `Python` 实现
+
 一般讨论的 `Python` 指的是 `CPython`，此外还有 `Stacklless Python`，`Jpython`，`Iron Python`，`PyPy`。
+
+## 环境隔离
+
+环境隔离用于解决各种库版本的相互依赖，避免依赖相互冲突。
+
+### 好处
+
+- 解决了这样的难题：”X项目依赖1.x版本，而Y项目依赖4.x版本“。
+- 项目不再受限于系统发行版仓库中包的版本。
+- 不会破坏依赖特定包版本的其他系统服务。
+- 项目依赖的包列表可以轻松”锁定（frozen）“，复制起来也很容易。
+
+#### 解决方案
+
+#### 应用层
+
+1. virtualenv
+2. venv
+3. buildout
+
+#### 系统级
+1. Vagrant
+2. Docker
+
+
+## 其他资源
+- Python 文档
+- PyPI-Python 包索引
+- PEP 0-Python 改进提案索引
+   
