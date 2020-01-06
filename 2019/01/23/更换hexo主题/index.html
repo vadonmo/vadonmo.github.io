@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>更换hexo主题 - 青木</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="更换hexo主题" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">首页</a>
+                
+                <a class="navbar-item" href="/archives">文章</a>
+                
+                <a class="navbar-item" href="/categories">分类</a>
+                
+                <a class="navbar-item" href="/tags">标签</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/vadonmo">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-23T06:30:01.000Z">2019-01-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑记录/">爬坑记录</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 459 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                更换hexo主题
+            
+        </h1>
+        <div class="content">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>趁热打铁，写完上一篇，赶紧马不停蹄再来一篇，万一没激情就只不定哪天才能写了。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><a id="more"></a>
+<p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">在这</a>挑一款好看的主题，我选的是<a href="https://clovertuan.github.io/" target="_blank" rel="noopener">这个</a>，很简洁。</p>
+<h2 id="主题更换"><a href="#主题更换" class="headerlink" title="主题更换"></a>主题更换</h2><p>其实每一个主题作者都写了步骤，按照步骤来准没错。</p>
+<h3 id="切换到hexo主题目录"><a href="#切换到hexo主题目录" class="headerlink" title="切换到hexo主题目录"></a>切换到hexo主题目录</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd themes</span><br></pre></td></tr></table></figure>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/esappear/hexo-theme-clover clover</span><br></pre></td></tr></table></figure>
+<h2 id="以下为原作者教程，没啥可说的，每个人配置都不一样。"><a href="#以下为原作者教程，没啥可说的，每个人配置都不一样。" class="headerlink" title="以下为原作者教程，没啥可说的，每个人配置都不一样。"></a>以下为原作者教程，没啥可说的，每个人配置都不一样。</h2><h1 id="Clover"><a href="#Clover" class="headerlink" title="Clover"></a>Clover</h1><h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a><a href="https://clovertuan.github.io" target="_blank" rel="noopener">Preview</a></h2><p><img src="https://media.githubusercontent.com/avatars/8626321?orig=1&amp;token=ANM6mziZ-bdE9fPaDWu1LVN0JQ-Vz-k_ks5b0I9FwA%3D%3D" alt="preview"></p>
+<h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><p>You got a blog project built by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>. Your project directory should like this:<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_config.yml  node_modules  package.json  public  scaffolds  source  themes</span><br></pre></td></tr></table></figure></p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><ul>
+<li><p>Clone the repository.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/esappear/hexo-theme-clover themes/clover</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Set theme in <code>_config.yml</code> file of the project root:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: clover</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add <code>hexo-renderer-sass</code></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-sass --save</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Free-home-page"><a href="#Free-home-page" class="headerlink" title="Free home page."></a>Free home page.</h3><p>You can set posts of specific categories or tags in home page.<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">home:</span><br><span class="line">  # set card style of home page</span><br><span class="line">  # card: project-card</span><br><span class="line">  category: Projects</span><br><span class="line">  tag:</span><br><span class="line">    - js</span><br><span class="line">    - css</span><br><span class="line">  except_category: Something</span><br><span class="line">  except_tag: &apos;someTag&apos;</span><br></pre></td></tr></table></figure></p>
+<p>Post which belongs to <code>category</code> or <code>tag</code> and don’t belongs to <code>except_category</code> or <code>except_tag</code> will be filtered.</p>
+<h3 id="Page-excerpt-and-photos"><a href="#Page-excerpt-and-photos" class="headerlink" title="Page excerpt and photos"></a>Page excerpt and photos</h3><p>You can set an excerpt or photos in <code>Front-matter</code>.<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: post</span><br><span class="line">title: my_post_title</span><br><span class="line">excerpt: my_post_excerpt</span><br><span class="line">photos: [my_photo_url]</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h3 id="Tags-page"><a href="#Tags-page" class="headerlink" title="Tags page."></a>Tags page.</h3><ul>
+<li><p>Create a page named tags</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Edit tags page, set page layout to <code>tag</code>.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: tag</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-10-05 12:12:53</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Categories-page"><a href="#Categories-page" class="headerlink" title="Categories page."></a>Categories page.</h3><ul>
+<li><p>Create a page named categories</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Edit categories page, set page layout to <code>category</code>.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: category</span><br><span class="line">title: categories</span><br><span class="line">date: 2018-10-05 12:12:53</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="About-page"><a href="#About-page" class="headerlink" title="About page."></a>About page.</h3><ul>
+<li><p>Create a page named about</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Edit categories page, set page layout to <code>about</code>.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: about</span><br><span class="line">title: about</span><br><span class="line">date: 2018-10-05 12:12:53</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Social-Media"><a href="#Social-Media" class="headerlink" title="Social Media"></a>Social Media</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: your-url</span><br><span class="line">  Dribbble: your-url</span><br><span class="line">  Behance: your-url</span><br><span class="line">  Lofter: your-url</span><br><span class="line">  Instagram: your-url</span><br></pre></td></tr></table></figure>
+<h3 id="Custom-Menu"><a href="#Custom-Menu" class="headerlink" title="Custom Menu"></a>Custom Menu</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Project: /</span><br><span class="line">  Stuffs: /tags/Stuffs</span><br><span class="line">  Archive: /archives</span><br><span class="line">  About: /about</span><br></pre></td></tr></table></figure>
+<h3 id="Card-Style"><a href="#Card-Style" class="headerlink" title="Card Style"></a>Card Style</h3><p>Two kinds of card style: <code>project-card</code> and <code>article-card</code>. (Never mind the name.)<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">card_style:</span><br><span class="line">  home: project-card</span><br><span class="line">  archive: article-card</span><br><span class="line">  tag: article-card</span><br><span class="line">  category: article-card</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/hexo/">hexo</a>, <a class="has-link-grey -link" href="/tags/教程/">教程</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/01/24/虚拟主机部署thinkphp/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">虚拟主机部署thinkphp</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/01/23/搭建个人github博客/">
+                <span class="level-item">搭建个人github博客</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Vadon Mo">
+                    
+                    <p class="is-size-4 is-block">
+                        Vadon Mo
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        青木
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        7
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        7
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/vadonmo">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/vadonmo">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/vadonmo" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">vadonmo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Python/">
+            <span class="level-start">
+                <span class="level-item">Python</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/thinkphp/">
+            <span class="level-start">
+                <span class="level-item">thinkphp</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/前端/">
+            <span class="level-start">
+                <span class="level-item">前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/数据结构/">
+            <span class="level-start">
+                <span class="level-item">数据结构</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/爬坑记录/">
+            <span class="level-start">
+                <span class="level-item">爬坑记录</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/antd/" style="font-size: 10px;">antd</a> <a href="/tags/antd-Pro/" style="font-size: 10px;">antd Pro</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/thinkphp/" style="font-size: 10px;">thinkphp</a> <a href="/tags/学习/" style="font-size: 15px;">学习</a> <a href="/tags/教程/" style="font-size: 20px;">教程</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><ul class="menu-list"><li>
+        <a class="is-flex" href="#前言">
+        <span class="has-mr-6">1.1</span>
+        <span>前言</span>
+        </a></li><li>
+        <a class="is-flex" href="#环境准备">
+        <span class="has-mr-6">1.2</span>
+        <span>环境准备</span>
+        </a></li><li>
+        <a class="is-flex" href="#主题更换">
+        <span class="has-mr-6">1.3</span>
+        <span>主题更换</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#切换到hexo主题目录">
+        <span class="has-mr-6">1.3.1</span>
+        <span>切换到hexo主题目录</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装">
+        <span class="has-mr-6">1.3.2</span>
+        <span>安装</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#以下为原作者教程，没啥可说的，每个人配置都不一样。">
+        <span class="has-mr-6">1.4</span>
+        <span>以下为原作者教程，没啥可说的，每个人配置都不一样。</span>
+        </a></li></ul><li>
+        <a class="is-flex" href="#Clover">
+        <span class="has-mr-6">2</span>
+        <span>Clover</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Preview">
+        <span class="has-mr-6">2.1</span>
+        <span>Preview</span>
+        </a></li><li>
+        <a class="is-flex" href="#Prerequisite">
+        <span class="has-mr-6">2.2</span>
+        <span>Prerequisite</span>
+        </a></li><li>
+        <a class="is-flex" href="#Installation">
+        <span class="has-mr-6">2.3</span>
+        <span>Installation</span>
+        </a></li><li>
+        <a class="is-flex" href="#Features">
+        <span class="has-mr-6">2.4</span>
+        <span>Features</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Free-home-page">
+        <span class="has-mr-6">2.4.1</span>
+        <span>Free home page.</span>
+        </a></li><li>
+        <a class="is-flex" href="#Page-excerpt-and-photos">
+        <span class="has-mr-6">2.4.2</span>
+        <span>Page excerpt and photos</span>
+        </a></li><li>
+        <a class="is-flex" href="#Tags-page">
+        <span class="has-mr-6">2.4.3</span>
+        <span>Tags page.</span>
+        </a></li><li>
+        <a class="is-flex" href="#Categories-page">
+        <span class="has-mr-6">2.4.4</span>
+        <span>Categories page.</span>
+        </a></li><li>
+        <a class="is-flex" href="#About-page">
+        <span class="has-mr-6">2.4.5</span>
+        <span>About page.</span>
+        </a></li><li>
+        <a class="is-flex" href="#Social-Media">
+        <span class="has-mr-6">2.4.6</span>
+        <span>Social Media</span>
+        </a></li><li>
+        <a class="is-flex" href="#Custom-Menu">
+        <span class="has-mr-6">2.4.7</span>
+        <span>Custom Menu</span>
+        </a></li><li>
+        <a class="is-flex" href="#Card-Style">
+        <span class="has-mr-6">2.4.8</span>
+        <span>Card Style</span>
+        </a></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/01/06/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-06T02:37:00.661Z">2020-01-06</time></div>
+                    <a href="/2020/01/06/hello-world/" class="has-link-black-ter is-size-6">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/24/antd pro部署后刷新404解决方案/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="antd pro部署后刷新404解决方案">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-24T00:35:24.000Z">2019-10-24</time></div>
+                    <a href="/2019/10/24/antd pro部署后刷新404解决方案/" class="has-link-black-ter is-size-6">antd pro部署后刷新404解决方案</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/23/Python 高级编程（1）/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Python 高级编程（1）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-23T01:06:24.000Z">2019-10-23</time></div>
+                    <a href="/2019/10/23/Python 高级编程（1）/" class="has-link-black-ter is-size-6">Python 高级编程（1）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/24/二叉树/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/二叉树/完全二叉树.png" alt="二叉树">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T14:06:24.000Z">2019-01-24</time></div>
+                    <a href="/2019/01/24/二叉树/" class="has-link-black-ter is-size-6">二叉树</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/数据结构/">数据结构</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/24/虚拟主机部署thinkphp/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="虚拟主机部署thinkphp">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T10:58:30.000Z">2019-01-24</time></div>
+                    <a href="/2019/01/24/虚拟主机部署thinkphp/" class="has-link-black-ter is-size-6">虚拟主机部署thinkphp</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/thinkphp/">thinkphp</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/antd/">
+                        <span class="tag">antd</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/antd-Pro/">
+                        <span class="tag">antd Pro</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/thinkphp/">
+                        <span class="tag">thinkphp</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/学习/">
+                        <span class="tag">学习</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/教程/">
+                        <span class="tag">教程</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><ul class="menu-list"><li>
+        <a class="is-flex" href="#前言">
+        <span class="has-mr-6">1.1</span>
+        <span>前言</span>
+        </a></li><li>
+        <a class="is-flex" href="#环境准备">
+        <span class="has-mr-6">1.2</span>
+        <span>环境准备</span>
+        </a></li><li>
+        <a class="is-flex" href="#主题更换">
+        <span class="has-mr-6">1.3</span>
+        <span>主题更换</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#切换到hexo主题目录">
+        <span class="has-mr-6">1.3.1</span>
+        <span>切换到hexo主题目录</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装">
+        <span class="has-mr-6">1.3.2</span>
+        <span>安装</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#以下为原作者教程，没啥可说的，每个人配置都不一样。">
+        <span class="has-mr-6">1.4</span>
+        <span>以下为原作者教程，没啥可说的，每个人配置都不一样。</span>
+        </a></li></ul><li>
+        <a class="is-flex" href="#Clover">
+        <span class="has-mr-6">2</span>
+        <span>Clover</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Preview">
+        <span class="has-mr-6">2.1</span>
+        <span>Preview</span>
+        </a></li><li>
+        <a class="is-flex" href="#Prerequisite">
+        <span class="has-mr-6">2.2</span>
+        <span>Prerequisite</span>
+        </a></li><li>
+        <a class="is-flex" href="#Installation">
+        <span class="has-mr-6">2.3</span>
+        <span>Installation</span>
+        </a></li><li>
+        <a class="is-flex" href="#Features">
+        <span class="has-mr-6">2.4</span>
+        <span>Features</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Free-home-page">
+        <span class="has-mr-6">2.4.1</span>
+        <span>Free home page.</span>
+        </a></li><li>
+        <a class="is-flex" href="#Page-excerpt-and-photos">
+        <span class="has-mr-6">2.4.2</span>
+        <span>Page excerpt and photos</span>
+        </a></li><li>
+        <a class="is-flex" href="#Tags-page">
+        <span class="has-mr-6">2.4.3</span>
+        <span>Tags page.</span>
+        </a></li><li>
+        <a class="is-flex" href="#Categories-page">
+        <span class="has-mr-6">2.4.4</span>
+        <span>Categories page.</span>
+        </a></li><li>
+        <a class="is-flex" href="#About-page">
+        <span class="has-mr-6">2.4.5</span>
+        <span>About page.</span>
+        </a></li><li>
+        <a class="is-flex" href="#Social-Media">
+        <span class="has-mr-6">2.4.6</span>
+        <span>Social Media</span>
+        </a></li><li>
+        <a class="is-flex" href="#Custom-Menu">
+        <span class="has-mr-6">2.4.7</span>
+        <span>Custom Menu</span>
+        </a></li><li>
+        <a class="is-flex" href="#Card-Style">
+        <span class="has-mr-6">2.4.8</span>
+        <span>Card Style</span>
+        </a></li></ul></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/01/06/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-06T02:37:00.661Z">2020-01-06</time></div>
+                    <a href="/2020/01/06/hello-world/" class="has-link-black-ter is-size-6">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/24/antd pro部署后刷新404解决方案/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="antd pro部署后刷新404解决方案">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-24T00:35:24.000Z">2019-10-24</time></div>
+                    <a href="/2019/10/24/antd pro部署后刷新404解决方案/" class="has-link-black-ter is-size-6">antd pro部署后刷新404解决方案</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/23/Python 高级编程（1）/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Python 高级编程（1）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-23T01:06:24.000Z">2019-10-23</time></div>
+                    <a href="/2019/10/23/Python 高级编程（1）/" class="has-link-black-ter is-size-6">Python 高级编程（1）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/24/二叉树/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/二叉树/完全二叉树.png" alt="二叉树">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T14:06:24.000Z">2019-01-24</time></div>
+                    <a href="/2019/01/24/二叉树/" class="has-link-black-ter is-size-6">二叉树</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/数据结构/">数据结构</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/24/虚拟主机部署thinkphp/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="虚拟主机部署thinkphp">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T10:58:30.000Z">2019-01-24</time></div>
+                    <a href="/2019/01/24/虚拟主机部署thinkphp/" class="has-link-black-ter is-size-6">虚拟主机部署thinkphp</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/thinkphp/">thinkphp</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/antd/">
+                        <span class="tag">antd</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/antd-Pro/">
+                        <span class="tag">antd Pro</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/thinkphp/">
+                        <span class="tag">thinkphp</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/学习/">
+                        <span class="tag">学习</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/教程/">
+                        <span class="tag">教程</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="更换hexo主题" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Vadon Mo&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/vadonmo">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

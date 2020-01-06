@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>搭建个人github博客 - 青木</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="搭建个人github博客" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">首页</a>
+                
+                <a class="navbar-item" href="/archives">文章</a>
+                
+                <a class="navbar-item" href="/categories">分类</a>
+                
+                <a class="navbar-item" href="/tags">标签</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/vadonmo">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-01-23T04:38:47.000Z">2019-01-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/爬坑记录/">爬坑记录</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 分钟 读完 (大约 1044 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                搭建个人github博客
+            
+        </h1>
+        <div class="content">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>说起来有点惭愧，早在16年就搭建了博客，却一直没有写，断断续续在csdn写过一点，都没有长久。本来就不是一个有毅力的人，鬼知道这个博客能写多久。闲话少说，下面记录下搭建过程。<br><a id="more"></a></p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h3 id="nodejs安装"><a href="#nodejs安装" class="headerlink" title="nodejs安装"></a>nodejs安装</h3><p>个人电脑已安装过，本文不再赘述。</p>
+<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><p>git人手必备吧，教程自行搜索。</p>
+<h3 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h3><p>npm 在安装nodejs后自带，配制环境变量即可任意目录使用。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>验证是否成功<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></p>
+<p>出现如图所示即为成功</p>
+<p><img src="/2019/01/23/搭建个人github博客/hexo_install.png" alt="hexo_install"></p>
+<h2 id="hexo使用"><a href="#hexo使用" class="headerlink" title="hexo使用"></a>hexo使用</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>一般来说执行一次就够了，没啥特殊的地方。第一次耗时有点久，毕竟gayhub日常被墙，建议dns改为 <code>8.8.8.8</code> ,虽传言说这货并非googledns，但架不住好用。改完gayhub网速还是可以的 ~o(<em>￣▽￣</em>)o<br>不想在当前目录初始化，后面可直接跟路径参数，具体用法参考官方文档，此处只记录简单用法。毕竟难点的我也不会。~o(<em>￣▽￣</em>)o</p>
+<h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>hexo基于nodejs开发，熟悉node的应该对此命令不陌生。简单说就是安装根目录下面 <code>package.json</code> 文件中的各种包。npm毕竟是个包管理工具，类似maven，gradle。</p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -s</span><br></pre></td></tr></table></figure>
+<p>默认端口 <code>4000</code> 启动成功后即可在 <code>localhost:4000</code> 查看</p>
+<h2 id="部署至github"><a href="#部署至github" class="headerlink" title="部署至github"></a>部署至github</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p><img src="/2019/01/23/搭建个人github博客/create_repo.png" alt="create_repo"><br>仓库名格式 <code>账号.github.io</code> 一个帐号只允许创建一个仓库，我已经创建了</p>
+<h3 id="绑定自定义域名"><a href="#绑定自定义域名" class="headerlink" title="绑定自定义域名"></a>绑定自定义域名</h3><p>此处非必需。只是因为很久前一时脑抽花50块钱买了个十年的域名，备案的时候才发现，国内不支持。。闲置了好久，正好扔这博客上，反正github不需要备案。</p>
+<p>点开新建的仓库，最右侧 <code>settings</code>，点开往下拉，如图所示。找到 <code>Custom domain</code> 改为自己的域名，保存即可。<br><img src="/2019/01/23/搭建个人github博客/settins.png" alt="settins"><br><img src="/2019/01/23/搭建个人github博客/githubpages.png" alt="githubpages"></p>
+<h3 id="上传至github"><a href="#上传至github" class="headerlink" title="上传至github"></a>上传至github</h3><p>修改根目录 <code>_config.yml</code> 中 <code>deploy</code> 项即可。<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/vadonmo/vadonmo.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><h3 id="图片显示问题"><a href="#图片显示问题" class="headerlink" title="图片显示问题"></a>图片显示问题</h3><ol>
+<li>确认根目录 <code>_config.yml</code> 中 <code>post_asset_folder</code> 值为 <code>true</code>，此一步目的在于新建博客时，同时建立同名文件夹，放置相关资源，比如图片，视频等。</li>
+<li>在根目录下执行下列命令<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="/2019/01/23/搭建个人github博客/hexo_asset_image.png" alt="hexo-asset-image"></p>
+<p>嗯。。。报警告了，不过不影响</p>
+<ol start="3">
+<li>此时再新建博客的时候在 <code>_posts</code>目录下面就会看到博客同名的文件夹，图片放进去就好。md正常相对路径引用即可。</li>
+</ol>
+<p><img src="/2019/01/23/搭建个人github博客/posts_imgs.png" alt="posts_imgs"><br><figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">posts_imgs</span>](<span class="hljs-link">搭建个人github博客/posts_imgs.png</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="换电脑数据没法同步问题"><a href="#换电脑数据没法同步问题" class="headerlink" title="换电脑数据没法同步问题"></a>换电脑数据没法同步问题</h3><p>参考知乎大佬解决方案建立分支即可，<a href="https://www.zhihu.com/question/21193762" target="_blank" rel="noopener">传送门</a><br>简单来说是将hexo项目上传至博客分支，每次写完 deploy 后将hexo文件一块上传至分支。</p>
+<h3 id="每次部署CNAME文件消失问题"><a href="#每次部署CNAME文件消失问题" class="headerlink" title="每次部署CNAME文件消失问题"></a>每次部署CNAME文件消失问题</h3><p>我的解决办法是在public目录下新建 <code>CNAME</code> 文件，里面内容为自己域名。这样每次部署就不会丢失了。</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight shell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> 本地预览，分别为清空缓存，生成静态文件，启动服务器</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br><span class="line"><span class="hljs-meta">#</span><span class="hljs-bash"> 发布至github</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>就先这样吧，博客写着真累，果然以前不写博客是对的。~o(<em>￣▽￣</em>)o<br>下一篇 讲讲怎么换背景吧，默认的稍微有点难看。</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/hexo/">hexo</a>, <a class="has-link-grey -link" href="/tags/教程/">教程</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/01/23/更换hexo主题/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">更换hexo主题</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Vadon Mo">
+                    
+                    <p class="is-size-4 is-block">
+                        Vadon Mo
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        青木
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        7
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        7
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/vadonmo">
+                关注我</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/vadonmo">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/vadonmo" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">vadonmo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Python/">
+            <span class="level-start">
+                <span class="level-item">Python</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/thinkphp/">
+            <span class="level-start">
+                <span class="level-item">thinkphp</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/前端/">
+            <span class="level-start">
+                <span class="level-item">前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/数据结构/">
+            <span class="level-start">
+                <span class="level-item">数据结构</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/爬坑记录/">
+            <span class="level-start">
+                <span class="level-item">爬坑记录</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            标签云
+        </h3>
+        <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/antd/" style="font-size: 10px;">antd</a> <a href="/tags/antd-Pro/" style="font-size: 10px;">antd Pro</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/thinkphp/" style="font-size: 10px;">thinkphp</a> <a href="/tags/学习/" style="font-size: 15px;">学习</a> <a href="/tags/教程/" style="font-size: 20px;">教程</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#前言">
+        <span class="has-mr-6">1</span>
+        <span>前言</span>
+        </a></li><li>
+        <a class="is-flex" href="#环境准备">
+        <span class="has-mr-6">2</span>
+        <span>环境准备</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#nodejs安装">
+        <span class="has-mr-6">2.1</span>
+        <span>nodejs安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#git安装">
+        <span class="has-mr-6">2.2</span>
+        <span>git安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#hexo安装">
+        <span class="has-mr-6">2.3</span>
+        <span>hexo安装</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#hexo使用">
+        <span class="has-mr-6">3</span>
+        <span>hexo使用</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#初始化">
+        <span class="has-mr-6">3.1</span>
+        <span>初始化</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装依赖">
+        <span class="has-mr-6">3.2</span>
+        <span>安装依赖</span>
+        </a></li><li>
+        <a class="is-flex" href="#生成静态文件">
+        <span class="has-mr-6">3.3</span>
+        <span>生成静态文件</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动服务器">
+        <span class="has-mr-6">3.4</span>
+        <span>启动服务器</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#部署至github">
+        <span class="has-mr-6">4</span>
+        <span>部署至github</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#创建仓库">
+        <span class="has-mr-6">4.1</span>
+        <span>创建仓库</span>
+        </a></li><li>
+        <a class="is-flex" href="#绑定自定义域名">
+        <span class="has-mr-6">4.2</span>
+        <span>绑定自定义域名</span>
+        </a></li><li>
+        <a class="is-flex" href="#上传至github">
+        <span class="has-mr-6">4.3</span>
+        <span>上传至github</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#其他问题">
+        <span class="has-mr-6">5</span>
+        <span>其他问题</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#图片显示问题">
+        <span class="has-mr-6">5.1</span>
+        <span>图片显示问题</span>
+        </a></li><li>
+        <a class="is-flex" href="#换电脑数据没法同步问题">
+        <span class="has-mr-6">5.2</span>
+        <span>换电脑数据没法同步问题</span>
+        </a></li><li>
+        <a class="is-flex" href="#每次部署CNAME文件消失问题">
+        <span class="has-mr-6">5.3</span>
+        <span>每次部署CNAME文件消失问题</span>
+        </a></li><li>
+        <a class="is-flex" href="#常用命令">
+        <span class="has-mr-6">5.4</span>
+        <span>常用命令</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#结语">
+        <span class="has-mr-6">6</span>
+        <span>结语</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/01/06/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-06T02:37:00.661Z">2020-01-06</time></div>
+                    <a href="/2020/01/06/hello-world/" class="has-link-black-ter is-size-6">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/24/antd pro部署后刷新404解决方案/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="antd pro部署后刷新404解决方案">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-24T00:35:24.000Z">2019-10-24</time></div>
+                    <a href="/2019/10/24/antd pro部署后刷新404解决方案/" class="has-link-black-ter is-size-6">antd pro部署后刷新404解决方案</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/23/Python 高级编程（1）/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Python 高级编程（1）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-23T01:06:24.000Z">2019-10-23</time></div>
+                    <a href="/2019/10/23/Python 高级编程（1）/" class="has-link-black-ter is-size-6">Python 高级编程（1）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/24/二叉树/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/二叉树/完全二叉树.png" alt="二叉树">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T14:06:24.000Z">2019-01-24</time></div>
+                    <a href="/2019/01/24/二叉树/" class="has-link-black-ter is-size-6">二叉树</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/数据结构/">数据结构</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/24/虚拟主机部署thinkphp/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="虚拟主机部署thinkphp">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T10:58:30.000Z">2019-01-24</time></div>
+                    <a href="/2019/01/24/虚拟主机部署thinkphp/" class="has-link-black-ter is-size-6">虚拟主机部署thinkphp</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/thinkphp/">thinkphp</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/antd/">
+                        <span class="tag">antd</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/antd-Pro/">
+                        <span class="tag">antd Pro</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/thinkphp/">
+                        <span class="tag">thinkphp</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/学习/">
+                        <span class="tag">学习</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/教程/">
+                        <span class="tag">教程</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#前言">
+        <span class="has-mr-6">1</span>
+        <span>前言</span>
+        </a></li><li>
+        <a class="is-flex" href="#环境准备">
+        <span class="has-mr-6">2</span>
+        <span>环境准备</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#nodejs安装">
+        <span class="has-mr-6">2.1</span>
+        <span>nodejs安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#git安装">
+        <span class="has-mr-6">2.2</span>
+        <span>git安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#hexo安装">
+        <span class="has-mr-6">2.3</span>
+        <span>hexo安装</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#hexo使用">
+        <span class="has-mr-6">3</span>
+        <span>hexo使用</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#初始化">
+        <span class="has-mr-6">3.1</span>
+        <span>初始化</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装依赖">
+        <span class="has-mr-6">3.2</span>
+        <span>安装依赖</span>
+        </a></li><li>
+        <a class="is-flex" href="#生成静态文件">
+        <span class="has-mr-6">3.3</span>
+        <span>生成静态文件</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动服务器">
+        <span class="has-mr-6">3.4</span>
+        <span>启动服务器</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#部署至github">
+        <span class="has-mr-6">4</span>
+        <span>部署至github</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#创建仓库">
+        <span class="has-mr-6">4.1</span>
+        <span>创建仓库</span>
+        </a></li><li>
+        <a class="is-flex" href="#绑定自定义域名">
+        <span class="has-mr-6">4.2</span>
+        <span>绑定自定义域名</span>
+        </a></li><li>
+        <a class="is-flex" href="#上传至github">
+        <span class="has-mr-6">4.3</span>
+        <span>上传至github</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#其他问题">
+        <span class="has-mr-6">5</span>
+        <span>其他问题</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#图片显示问题">
+        <span class="has-mr-6">5.1</span>
+        <span>图片显示问题</span>
+        </a></li><li>
+        <a class="is-flex" href="#换电脑数据没法同步问题">
+        <span class="has-mr-6">5.2</span>
+        <span>换电脑数据没法同步问题</span>
+        </a></li><li>
+        <a class="is-flex" href="#每次部署CNAME文件消失问题">
+        <span class="has-mr-6">5.3</span>
+        <span>每次部署CNAME文件消失问题</span>
+        </a></li><li>
+        <a class="is-flex" href="#常用命令">
+        <span class="has-mr-6">5.4</span>
+        <span>常用命令</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#结语">
+        <span class="has-mr-6">6</span>
+        <span>结语</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/01/06/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-06T02:37:00.661Z">2020-01-06</time></div>
+                    <a href="/2020/01/06/hello-world/" class="has-link-black-ter is-size-6">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/24/antd pro部署后刷新404解决方案/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="antd pro部署后刷新404解决方案">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-24T00:35:24.000Z">2019-10-24</time></div>
+                    <a href="/2019/10/24/antd pro部署后刷新404解决方案/" class="has-link-black-ter is-size-6">antd pro部署后刷新404解决方案</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/10/23/Python 高级编程（1）/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Python 高级编程（1）">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-23T01:06:24.000Z">2019-10-23</time></div>
+                    <a href="/2019/10/23/Python 高级编程（1）/" class="has-link-black-ter is-size-6">Python 高级编程（1）</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/24/二叉树/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/二叉树/完全二叉树.png" alt="二叉树">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T14:06:24.000Z">2019-01-24</time></div>
+                    <a href="/2019/01/24/二叉树/" class="has-link-black-ter is-size-6">二叉树</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/数据结构/">数据结构</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/01/24/虚拟主机部署thinkphp/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="虚拟主机部署thinkphp">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T10:58:30.000Z">2019-01-24</time></div>
+                    <a href="/2019/01/24/虚拟主机部署thinkphp/" class="has-link-black-ter is-size-6">虚拟主机部署thinkphp</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/thinkphp/">thinkphp</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Python/">
+                        <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/antd/">
+                        <span class="tag">antd</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/antd-Pro/">
+                        <span class="tag">antd Pro</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo/">
+                        <span class="tag">hexo</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/thinkphp/">
+                        <span class="tag">thinkphp</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/学习/">
+                        <span class="tag">学习</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/教程/">
+                        <span class="tag">教程</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="搭建个人github博客" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Vadon Mo&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/vadonmo">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
