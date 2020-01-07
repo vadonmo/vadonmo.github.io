@@ -22,6 +22,10 @@ npm 在安装nodejs后自带，配制环境变量即可任意目录使用。
 ```
 npm install -g hexo-cli
 ```
+`node-sass` 地址404了，更换以下地址安装
+```
+ npm i node-sass --sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+```
 验证是否成功
 ```
 hexo -v
