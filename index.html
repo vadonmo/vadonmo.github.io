@@ -115,6 +115,12 @@
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
     <div class="card">
     
+    <div class="card-image">
+        <a href="/2020/01/19/群晖隐藏无权限的文件夹/" class="image is-7by1">
+            <img class="thumbnail" src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578534994591-c504926c-a927-4401-9665-45e71511c815.png#align=left&amp;display=inline&amp;height=363&amp;name=image.png&amp;originHeight=725&amp;originWidth=1271&amp;size=128788&amp;status=done&amp;style=none&amp;width=635.5" alt="群晖隐藏无权限的文件夹">
+        </a>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -129,7 +135,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 235 个字)
+                    2 分钟 读完 (大约 236 个字)
                 </span>
                 
             </div>
@@ -144,33 +150,17 @@
             <ol>
 <li>进如群晖后台 - 控制面板 - 终端机和 SNMP - 终端机 - 启用 ssh 功能</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578534994591-c504926c-a927-4401-9665-45e71511c815.png#align=left&amp;display=inline&amp;height=363&amp;name=image.png&amp;originHeight=725&amp;originWidth=1271&amp;size=128788&amp;status=done&amp;style=none&amp;width=635.5" alt="image.png"></p>
-<ol start="2">
-<li>ssh登录群晖，具体换成自己的用户名，ip</li>
-</ol>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@IP</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578535190282-a826cd2d-cd8c-438e-be0c-13586de429b9.png#align=left&amp;display=inline&amp;height=103&amp;name=image.png&amp;originHeight=206&amp;originWidth=926&amp;size=34246&amp;status=done&amp;style=none&amp;width=463" alt="image.png"></p>
-<ol start="3">
-<li>切换 <code>root</code> 权限，密码输入用户名的密码</li>
-</ol>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578535331026-81de2d13-b706-476c-bd02-df6ccc2533a1.png#align=left&amp;display=inline&amp;height=65&amp;name=image.png&amp;originHeight=130&amp;originWidth=525&amp;size=6310&amp;status=done&amp;style=none&amp;width=262.5" alt="image.png"></p>
-<ol start="4">
-<li>打开 <code>smb.conf</code> </li>
-</ol>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li><p>在samba配置文件(/etc/samba/smb.conf)的global section里加入，按 <code>j</code> 下移到最后， <code>i</code> 切换到插入模式。输入下面两行。</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map to guest=never</span><br><span class="line">access based share enum=yes</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>esc</code> 后，输入 <code>:wq</code> 保存退出。</p>
-</li>
-<li>重启</li>
-</ol>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">roboot</span><br></pre></td></tr></table></figure>
-
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578534994591-c504926c-a927-4401-9665-45e71511c815.png#align=left&amp;display=inline&amp;height=363&amp;name=image.png&amp;originHeight=725&amp;originWidth=1271&amp;size=128788&amp;status=done&amp;style=none&amp;width=635.5" alt="image.png"><br></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/01/19/群晖隐藏无权限的文件夹/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -756,7 +746,7 @@
             
             <a href="/2020/01/19/群晖隐藏无权限的文件夹/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="群晖隐藏无权限的文件夹">
+                    <img class="thumbnail" src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578534994591-c504926c-a927-4401-9665-45e71511c815.png#align=left&amp;display=inline&amp;height=363&amp;name=image.png&amp;originHeight=725&amp;originWidth=1271&amp;size=128788&amp;status=done&amp;style=none&amp;width=635.5" alt="群晖隐藏无权限的文件夹">
                 </p>
             </a>
             
@@ -990,7 +980,7 @@
             
             <a href="/2020/01/19/群晖隐藏无权限的文件夹/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="群晖隐藏无权限的文件夹">
+                    <img class="thumbnail" src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578534994591-c504926c-a927-4401-9665-45e71511c815.png#align=left&amp;display=inline&amp;height=363&amp;name=image.png&amp;originHeight=725&amp;originWidth=1271&amp;size=128788&amp;status=done&amp;style=none&amp;width=635.5" alt="群晖隐藏无权限的文件夹">
                 </p>
             </a>
             
