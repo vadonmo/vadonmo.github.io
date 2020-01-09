@@ -119,6 +119,72 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-01-09T01:45:23.118Z">2020-01-09</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 246 个字)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/01/09/群晖隐藏无权限的文件夹/"></a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="群晖隐藏无权限的文件夹"><a href="#群晖隐藏无权限的文件夹" class="headerlink" title="群晖隐藏无权限的文件夹"></a>群晖隐藏无权限的文件夹</h1><ol>
+<li>进如群晖后台 - 控制面板 - 终端机和 SNMP - 终端机 - 启用 ssh 功能</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578534994591-c504926c-a927-4401-9665-45e71511c815.png#align=left&amp;display=inline&amp;height=363&amp;name=image.png&amp;originHeight=725&amp;originWidth=1271&amp;size=128788&amp;status=done&amp;style=none&amp;width=635.5" alt="image.png"></p>
+<ol start="2">
+<li>ssh登录群晖，具体换成自己的用户名，ip</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@IP</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578535190282-a826cd2d-cd8c-438e-be0c-13586de429b9.png#align=left&amp;display=inline&amp;height=103&amp;name=image.png&amp;originHeight=206&amp;originWidth=926&amp;size=34246&amp;status=done&amp;style=none&amp;width=463" alt="image.png"></p>
+<ol start="3">
+<li>切换 <code>root</code> 权限，密码输入用户名的密码</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578535331026-81de2d13-b706-476c-bd02-df6ccc2533a1.png#align=left&amp;display=inline&amp;height=65&amp;name=image.png&amp;originHeight=130&amp;originWidth=525&amp;size=6310&amp;status=done&amp;style=none&amp;width=262.5" alt="image.png"></p>
+<ol start="4">
+<li>打开 <code>smb.conf</code> </li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>在samba配置文件(/etc/samba/smb.conf)的global section里加入，按 <code>j</code> 下移到最后， <code>i</code> 切换到插入模式。输入下面两行。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map to guest=never</span><br><span class="line">access based share enum=yes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>esc</code> 后，输入 <code>:wq</code> 保存退出。</p>
+</li>
+<li>重启</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">roboot</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-01-06T02:37:00.661Z">2020-01-06</time>
                 
                 
@@ -516,7 +582,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        8
                     </p>
                 </div>
             </div>
@@ -684,6 +750,25 @@
         
         <article class="media">
             
+            <a href="/2020/01/09/群晖隐藏无权限的文件夹/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-09T01:45:23.118Z">2020-01-09</time></div>
+                    <a href="/2020/01/09/群晖隐藏无权限的文件夹/" class="has-link-black-ter is-size-6"></a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/01/06/hello-world/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
@@ -758,25 +843,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/01/24/虚拟主机部署thinkphp/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="虚拟主机部署thinkphp">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T10:58:30.000Z">2019-01-24</time></div>
-                    <a href="/2019/01/24/虚拟主机部署thinkphp/" class="has-link-black-ter is-size-6">虚拟主机部署thinkphp</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/thinkphp/">thinkphp</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -795,7 +861,7 @@
                     <span class="level-item">一月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -911,6 +977,25 @@
         
         <article class="media">
             
+            <a href="/2020/01/09/群晖隐藏无权限的文件夹/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-09T01:45:23.118Z">2020-01-09</time></div>
+                    <a href="/2020/01/09/群晖隐藏无权限的文件夹/" class="has-link-black-ter is-size-6"></a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/01/06/hello-world/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
@@ -985,25 +1070,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/01/24/虚拟主机部署thinkphp/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="虚拟主机部署thinkphp">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-24T10:58:30.000Z">2019-01-24</time></div>
-                    <a href="/2019/01/24/虚拟主机部署thinkphp/" class="has-link-black-ter is-size-6">虚拟主机部署thinkphp</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/thinkphp/">thinkphp</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1022,7 +1088,7 @@
                     <span class="level-item">一月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>

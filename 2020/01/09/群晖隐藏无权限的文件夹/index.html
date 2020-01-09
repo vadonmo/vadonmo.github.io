@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>分类: 爬坑记录 - 青木</title>
+<title>青木</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -69,7 +69,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="青木" height="28">
+                <img src="/images/logo.svg" alt="" height="28">
             
             </a>
         </div>
@@ -113,34 +113,18 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">爬坑记录</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-01-23T06:30:01.000Z">2019-01-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑记录/">爬坑记录</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2020-01-09T01:45:23.118Z">2020-01-09</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 459 个字)
+                    2 分钟 读完 (大约 246 个字)
                 </span>
                 
             </div>
@@ -148,22 +132,40 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/01/23/更换hexo主题/">更换hexo主题</a>
+                
             
         </h1>
         <div class="content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>趁热打铁，写完上一篇，赶紧马不停蹄再来一篇，万一没激情就只不定哪天才能写了。</p>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2>
+            <h1 id="群晖隐藏无权限的文件夹"><a href="#群晖隐藏无权限的文件夹" class="headerlink" title="群晖隐藏无权限的文件夹"></a>群晖隐藏无权限的文件夹</h1><ol>
+<li>进如群晖后台 - 控制面板 - 终端机和 SNMP - 终端机 - 启用 ssh 功能</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578534994591-c504926c-a927-4401-9665-45e71511c815.png#align=left&amp;display=inline&amp;height=363&amp;name=image.png&amp;originHeight=725&amp;originWidth=1271&amp;size=128788&amp;status=done&amp;style=none&amp;width=635.5" alt="image.png"></p>
+<ol start="2">
+<li>ssh登录群晖，具体换成自己的用户名，ip</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@IP</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578535190282-a826cd2d-cd8c-438e-be0c-13586de429b9.png#align=left&amp;display=inline&amp;height=103&amp;name=image.png&amp;originHeight=206&amp;originWidth=926&amp;size=34246&amp;status=done&amp;style=none&amp;width=463" alt="image.png"></p>
+<ol start="3">
+<li>切换 <code>root</code> 权限，密码输入用户名的密码</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/353851/1578535331026-81de2d13-b706-476c-bd02-df6ccc2533a1.png#align=left&amp;display=inline&amp;height=65&amp;name=image.png&amp;originHeight=130&amp;originWidth=525&amp;size=6310&amp;status=done&amp;style=none&amp;width=262.5" alt="image.png"></p>
+<ol start="4">
+<li>打开 <code>smb.conf</code> </li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>在samba配置文件(/etc/samba/smb.conf)的global section里加入，按 <code>j</code> 下移到最后， <code>i</code> 切换到插入模式。输入下面两行。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map to guest=never</span><br><span class="line">access based share enum=yes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>esc</code> 后，输入 <code>:wq</code> 保存退出。</p>
+</li>
+<li>重启</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">roboot</span><br></pre></td></tr></table></figure>
+
         </div>
         
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/01/23/更换hexo主题/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
         
         
     </div>
@@ -173,58 +175,19 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-01-23T04:38:47.000Z">2019-01-23</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑记录/">爬坑记录</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    7 分钟 读完 (大约 1072 个字)
-                </span>
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/01/06/hello-world/">
+                <span class="level-item">Hello World</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/01/23/搭建个人github博客/">搭建个人github博客</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>说起来有点惭愧，早在16年就搭建了博客，却一直没有写，断断续续在csdn写过一点，都没有长久。本来就不是一个有毅力的人，鬼知道这个博客能写多久。闲话少说，下面记录下搭建过程。<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/01/23/搭建个人github博客/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
 
 
 </div>
@@ -880,7 +843,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="青木" height="28">
+                    <img src="/images/logo.svg" alt="" height="28">
                 
                 </a>
                 <p class="is-size-7">
