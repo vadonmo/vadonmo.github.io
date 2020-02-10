@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>群晖隐藏无权限的文件夹 - 青木</title>
+<title>CSS画三角形 - 青木</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -69,7 +69,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="群晖隐藏无权限的文件夹" height="28">
+                <img src="/images/logo.svg" alt="CSS画三角形" height="28">
             
             </a>
         </div>
@@ -118,21 +118,27 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/thumbnail.svg" alt="CSS画三角形">
+        </span>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-01-19T02:09:47.000Z">2020-01-19</time>
+                <time class="level-item has-text-grey" datetime="2020-02-10T04:31:57.000Z">2020-02-10</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/爬坑记录/">爬坑记录</a>
+                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 208 个字)
+                    2 分钟 读完 (大约 227 个字)
                 </span>
                 
             </div>
@@ -140,38 +146,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                群晖隐藏无权限的文件夹
+                CSS画三角形
             
         </h1>
         <div class="content">
-            <ol>
-<li>进如群晖后台 - 控制面板 - 终端机和 SNMP - 终端机 - 启用 ssh 功能</li>
-</ol>
-<p><img src="/2020/01/19/群晖隐藏无权限的文件夹/1578534994591-c504926c-a927-4401-9665-45e71511c815.png" alt="开启ssh登录"><br><a id="more"></a></p>
-<ol start="2">
-<li>ssh登录群晖，具体换成自己的用户名，ip</li>
-</ol>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh 用户名@IP</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/01/19/群晖隐藏无权限的文件夹/1578535190282-a826cd2d-cd8c-438e-be0c-13586de429b9.png" alt="ssh登录"></p>
-<ol start="3">
-<li>切换 <code>root</code> 权限，密码输入用户名的密码</li>
-</ol>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/01/19/群晖隐藏无权限的文件夹/1578535331026-81de2d13-b706-476c-bd02-df6ccc2533a1.png" alt="切换root"></p>
-<ol start="4">
-<li>打开 <code>smb.conf</code> </li>
-</ol>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/samba/smb.conf</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li><p>在samba配置文件(/etc/samba/smb.conf)的global section里加入，按 <code>j</code> 下移到最后， <code>i</code> 切换到插入模式。输入下面两行。</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map to guest=never</span><br><span class="line">access based share enum=yes</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>esc</code> 后，输入 <code>:wq</code> 保存退出。</p>
-</li>
-<li><p>重启</p>
-</li>
-</ol>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>写网页经常会用到三角形符号，通常使用图片最简单，但是缩放有时不是很好，很容易失真。CSS便写的话就没有这些限制了。<br><a id="more"></a></p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>先来看一段代码<br><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**css*/</span></span><br><span class="line"><span class="hljs-selector-class">.d1</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>; </span><br><span class="line">    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>; </span><br><span class="line">    <span class="hljs-attribute">border</span>: <span class="hljs-number">100px</span> solid <span class="hljs-number">#339933</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">/**html*/</span></span><br><span class="line">&lt;div class="d1"&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2020/02/10/CSS画三角形/Snipaste_2020-02-10_12-57-24.png" alt="效果图"></p>
+<p>换成不同的颜色</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/**css*/</span><br><span class="line">.d2&#123;</span><br><span class="line">    width: 0; </span><br><span class="line">    height: 0;</span><br><span class="line">    border-width: 100px;</span><br><span class="line">    border-style: solid;</span><br><span class="line">    border-color:#FFCCCC #0099CC #996699 #339933;</span><br><span class="line">&#125;</span><br><span class="line">/**html*/</span><br><span class="line">&lt;div class=&quot;d2&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/02/10/CSS画三角形/Snipaste_2020-02-10_13-06-18.png" alt="效果图"></p>
+<p>将其他三个方向改为透明</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/**css*/</span><br><span class="line">.d2&#123;</span><br><span class="line">    width: 0; </span><br><span class="line">    height: 0;</span><br><span class="line">    border-width: 100px;</span><br><span class="line">    border-style: solid;</span><br><span class="line">    border-color:#FFCCCC transparent transparent transparent;</span><br><span class="line">&#125;</span><br><span class="line">/**html*/</span><br><span class="line">&lt;div class=&quot;d2&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/02/10/CSS画三角形/Snipaste_2020-02-10_14-43-45.png" alt="效果图"></p>
+<p>大功告成！！</p>
+<h2 id="画箭头"><a href="#画箭头" class="headerlink" title="画箭头"></a>画箭头</h2><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.left</span> &#123;</span><br><span class="line">    <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.left</span><span class="hljs-selector-pseudo">:before</span>,</span><br><span class="line"><span class="hljs-selector-class">.left</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="hljs-attribute">position</span>: absolute;</span><br><span class="line">    <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;</span><br><span class="line">    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">10px</span> transparent dashed;</span><br><span class="line">    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">10px</span> transparent dashed;</span><br><span class="line">    <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">10px</span> transparent dashed;</span><br><span class="line">    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">10px</span> <span class="hljs-number">#fff</span> solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.left</span><span class="hljs-selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">10px</span> <span class="hljs-number">#0099CC</span> solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.left</span><span class="hljs-selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="hljs-attribute">left</span>: <span class="hljs-number">1px</span>;</span><br><span class="line">    <span class="hljs-comment">/*覆盖并错开1px*/</span></span><br><span class="line">    <span class="hljs-attribute">border-right</span>: <span class="hljs-number">10px</span> <span class="hljs-number">#fff</span> solid;</span><br><span class="line">&#125;</span><br><span class="line">&lt;i class="left"&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/02/10/CSS画三角形/Snipaste_2020-02-10_14-45-45.png" alt="箭头"></p>
 
         </div>
         
@@ -179,7 +169,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/教程/">教程</a>, <a class="has-link-grey -link" href="/tags/群晖/">群晖</a>
+                    <a class="has-link-grey -link" href="/tags/css/">css</a>, <a class="has-link-grey -link" href="/tags/学习/">学习</a>
                 </div>
             </div>
         </div>
@@ -196,17 +186,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/01/19/如何用Python爬取boss直聘职业信息/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">如何用Python爬取boss直聘职业信息</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/24/antd pro部署后刷新404解决方案/">
-                <span class="level-item">antd pro部署后刷新404解决方案</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/01/19/如何用Python爬取boss直聘职业信息/">
+                <span class="level-item">如何用Python爬取boss直聘职业信息</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -420,7 +403,19 @@
             <h3 class="menu-label">
                 目录
             </h3>
-            
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#前言">
+        <span class="has-mr-6">1</span>
+        <span>前言</span>
+        </a></li><li>
+        <a class="is-flex" href="#步骤">
+        <span class="has-mr-6">2</span>
+        <span>步骤</span>
+        </a></li><li>
+        <a class="is-flex" href="#画箭头">
+        <span class="has-mr-6">3</span>
+        <span>画箭头</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
@@ -690,7 +685,19 @@
             <h3 class="menu-label">
                 目录
             </h3>
-            
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#前言">
+        <span class="has-mr-6">1</span>
+        <span>前言</span>
+        </a></li><li>
+        <a class="is-flex" href="#步骤">
+        <span class="has-mr-6">2</span>
+        <span>步骤</span>
+        </a></li><li>
+        <a class="is-flex" href="#画箭头">
+        <span class="has-mr-6">3</span>
+        <span>画箭头</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
@@ -954,7 +961,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="群晖隐藏无权限的文件夹" height="28">
+                    <img src="/images/logo.svg" alt="CSS画三角形" height="28">
                 
                 </a>
                 <p class="is-size-7">
