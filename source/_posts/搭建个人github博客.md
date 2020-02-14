@@ -110,6 +110,10 @@ npm install hexo-asset-image --save
 
 ### 常用命令
 ``` shell
+# 新建文档
+hexo new "title"
+```
+``` shell
 # 本地预览，分别为清空缓存，生成静态文件，启动服务器
 hexo clean && hexo g && hexo s
 # 发布至github
