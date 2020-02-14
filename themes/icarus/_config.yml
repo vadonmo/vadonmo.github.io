@@ -159,6 +159,8 @@ widgets:
         links:
             Hexo: 'https://hexo.io'
             vadonmo: 'https://github.com/vadonmo'
+            yuque: 'https://www.yuque.com/vadonmo'
+            
     -
         # Widget name
         type: category
