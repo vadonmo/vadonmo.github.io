@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>标签: css - 青木</title>
+<title>windows 断网自动重拨 - 青木</title>
 <meta name="baidu-site-verification" content="IgKBfkRi5G">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -70,7 +70,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="青木" height="28">
+                <img src="/images/logo.svg" alt="windows 断网自动重拨" height="28">
             
             </a>
         </div>
@@ -100,6 +100,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -114,39 +118,28 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">css</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-image">
-        <a href="/2020/02/10/CSS画三角形/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/CSS画三角形/Snipaste_2020-02-10_14-43-45.png" alt="CSS画三角形">
-        </a>
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/images/thumbnail.svg" alt="windows 断网自动重拨">
+        </span>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-02-10T04:31:57.000Z">2020-02-10</time>
+                <time class="level-item has-text-grey" datetime="2020-06-06T03:22:24.000Z">2020-06-06</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                <a class="has-link-grey -link" href="/categories/爬坑记录/">爬坑记录</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 227 个字)
+                    1 分钟 读完 (大约 188 个字)
                 </span>
                 
             </div>
@@ -154,21 +147,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/02/10/CSS画三角形/">CSS画三角形</a>
+                windows 断网自动重拨
             
         </h1>
         <div class="content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>写网页经常会用到三角形符号，通常使用图片最简单，但是缩放有时不是很好，很容易失真。CSS便写的话就没有这些限制了。<br></p>
+            <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>大家都喜欢用 <code>ping IP</code> 来检测网络是否连通，断网检测也是基于这个原理，通过返回的内容来判断是否断网，然后启动拨号程序就可以了。<br></p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight powershell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">:start</span><br><span class="line">ping -n <span class="hljs-number">2</span> <span class="hljs-number">114.114</span>.<span class="hljs-number">114.114</span> | find <span class="hljs-string">"TTL="</span> &gt;nul</span><br><span class="line"><span class="hljs-keyword">if</span> errorlevel <span class="hljs-number">1</span> (</span><br><span class="line">  rasdial test /disconnect</span><br><span class="line">  rasdial test 用户名 密码</span><br><span class="line">)</span><br><span class="line">TIMEOUT <span class="hljs-number">3600</span></span><br><span class="line">goto:start</span><br></pre></td></tr></table></figure>
+<p>上面是每隔一小时检测下网络是否通畅，也可以改短点，我这边测试的时候太短容易拨号错误，就算拨号成功了，也会造成DNS解析错误，原因暂且不明。<br></p>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>有一点值得注意，需要把宽带名改成英文，不然会出错，就是上文中的<code>test</code></p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/02/10/CSS画三角形/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/教程/">教程</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -178,7 +176,19 @@
 
 
 
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/10/CSS画三角形/">
+                <span class="level-item">CSS画三角形</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -391,6 +401,29 @@
         <div class="column-right-shadow is-hidden-widescreen is-sticky">
         
             
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#原理">
+        <span class="has-mr-6">1</span>
+        <span>原理</span>
+        </a></li><li>
+        <a class="is-flex" href="#代码">
+        <span class="has-mr-6">2</span>
+        <span>代码</span>
+        </a></li><li>
+        <a class="is-flex" href="#注意">
+        <span class="has-mr-6">3</span>
+        <span>注意</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
         
             
 <div class="card widget">
@@ -661,6 +694,29 @@
 <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#原理">
+        <span class="has-mr-6">1</span>
+        <span>原理</span>
+        </a></li><li>
+        <a class="is-flex" href="#代码">
+        <span class="has-mr-6">2</span>
+        <span>代码</span>
+        </a></li><li>
+        <a class="is-flex" href="#注意">
+        <span class="has-mr-6">3</span>
+        <span>注意</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
@@ -931,7 +987,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="青木" height="28">
+                    <img src="/images/logo.svg" alt="windows 断网自动重拨" height="28">
                 
                 </a>
                 <p class="is-size-7">
